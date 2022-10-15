@@ -14,6 +14,9 @@
         tools:targetApi="31"
         android:name=".MainApplication">
         <activity
+            android:name="MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".MapActivity"
             android:exported="false" />
         <activity
@@ -23,7 +26,7 @@
             android:name=".UserLocationActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainDevActivity"
             android:configChanges="orientation|screenSize"
             android:exported="true">
             <intent-filter>
