@@ -37,7 +37,7 @@ public class MapActivity extends AppCompatActivity {
                 null);
         mapObjects = mapView.getMap().getMapObjects().addCollection();
         PlacemarkMapObject mark = mapObjects.addPlacemark(point);
-        mark.setIcon(ImageProvider.fromResource(this, R.drawable.mark));
+        mark.setIcon(ImageProvider.fromResource(this, R.drawable.location));
         mark.setDraggable(true);
     }
 
