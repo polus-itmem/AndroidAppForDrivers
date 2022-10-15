@@ -2,16 +2,21 @@ package com.example.polushack
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
+import com.example.polushack.databinding.LoginBinding
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-//    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: LoginBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = LoginBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
         updateLoginPage()
+        binding.buttonSignIn.setOnClickListener {
+            Toast.makeText(this@MainActivity, "You dared to click me?", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onResume() {
@@ -20,10 +25,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateLoginPage() {
-        findViewById<TextView>(R.id.textView).apply {
-            text = getGreetingMessage()
-        }
-        findViewById<ImageView>(R.id.imageView).setImageResource(getImage())
+        binding.textViewGreeting.text = getGreetingMessage()
+        binding.imageView.setImageResource(getImage())
     }
     private fun getGreetingMessage():String{
         val c = Calendar.getInstance()
