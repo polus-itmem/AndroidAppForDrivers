@@ -3,6 +3,8 @@ package com.example.polushack;
 import android.os.Bundle;
 import android.app.Activity;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.yandex.mapkit.Animation;
 import com.yandex.mapkit.MapKitFactory;
 import com.yandex.mapkit.geometry.Point;
@@ -17,7 +19,7 @@ import com.yandex.runtime.image.ImageProvider;
  * This is a basic example that displays a map and sets camera focus on the target location.
  * Note: When working on your projects, remember to request the required permissions.
  */
-public class MapActivity extends Activity {
+public class MapActivity extends AppCompatActivity {
     private final Point TARGET_LOCATION = new Point(59.945933, 30.320045);
     private MapView mapView;
     private MapObjectCollection mapObjects;
@@ -35,10 +37,7 @@ public class MapActivity extends Activity {
                 null);
         mapObjects = mapView.getMap().getMapObjects().addCollection();
         PlacemarkMapObject mark = mapObjects.addPlacemark(point);
-        mark.setOpacity(0.5f);
         mark.setIcon(ImageProvider.fromResource(this, R.drawable.mark));
-        //:TODO
-        // Change the icon to the pin!
         mark.setDraggable(true);
     }
 
