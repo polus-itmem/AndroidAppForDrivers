@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PolusHack</string>
+    <string name="login_message1">Доброе утро!</string>
+    <string name="login_message2">Желаем вам продуктивного рабочего дня.</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Войти</string>
+    <string name="password">Пароль</string>
 </resources>
