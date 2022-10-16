@@ -22,6 +22,8 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.password.text
             Toast.makeText(this@LoginActivity,
                 "Entered login $login and password $password.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
 

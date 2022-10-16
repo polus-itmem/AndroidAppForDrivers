@@ -3,7 +3,7 @@ package com.example.polushack
 class DataModel (
     val tasks : List<TaskModel> = listOf(
         TaskModel(
-            status = Status.WAITING,
+            status = Status.WARNING,
             fromPlace = "ЕКБ",
             toPlace = "СПБ",
             fromTime = "12:30 1 Oct",
