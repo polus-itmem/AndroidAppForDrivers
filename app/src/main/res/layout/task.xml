@@ -4,80 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="12dp">
+    android:paddingBottom="12dp"
+    >
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/status"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/ImageView.Round"
-        tools:src="@drawable/warning" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/fromPlace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/stem_regular"
-        android:lines="1"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/status"
-        app:layout_constraintTop_toTopOf="@id/status"
-        tools:text="@string/def" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/status"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/ImageView.Round"
+            tools:src="@drawable/warning" />
 
-    <TextView
-        android:id="@+id/fromTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/stem_regular"
-        android:lines="1"
-        android:text="@string/def"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/fromPlace"
-        app:layout_constraintTop_toTopOf="@id/status" />
+        <TextView
+            android:id="@+id/fromPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/stem_regular"
+            android:lines="1"
+            android:textColor="#FFF6EC90"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/status"
+            app:layout_constraintTop_toTopOf="@id/status"
+            tools:text="@string/def" />
 
-    <TextView
-        android:id="@+id/toPlace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/stem_regular"
-        android:lines="1"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/status"
-        app:layout_constraintTop_toBottomOf="@id/fromPlace"
-        tools:text="@string/def"/>
+        <TextView
+            android:id="@+id/fromTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/stem_regular"
+            android:lines="1"
+            android:text="@string/def"
+            android:textColor="#FFF6EC90"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/fromPlace"
+            app:layout_constraintTop_toTopOf="@id/status" />
 
-    <TextView
-        android:id="@+id/toTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/stem_regular"
-        android:lines="1"
-        android:text="@string/def"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@id/toPlace"
-        app:layout_constraintTop_toBottomOf="@id/fromPlace" />
+        <TextView
+            android:id="@+id/toPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/stem_regular"
+            android:lines="1"
+            android:textColor="#FFF6EC90"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/status"
+            app:layout_constraintTop_toBottomOf="@id/fromPlace"
+            tools:text="@string/def" />
 
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:textColor="#A8ADB7"
-        app:layout_constraintStart_toStartOf="@id/status"
-        app:layout_constraintTop_toBottomOf="@id/status"
-        tools:text="@string/def" />
+        <TextView
+            android:id="@+id/toTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/stem_regular"
+            android:lines="1"
+            android:text="@string/def"
+            android:textColor="#F6EC90"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/toPlace"
+            app:layout_constraintTop_toBottomOf="@id/fromPlace" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF5722"
+            app:layout_constraintStart_toStartOf="@id/status"
+            app:layout_constraintTop_toBottomOf="@id/status"
+            tools:text="@string/def" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

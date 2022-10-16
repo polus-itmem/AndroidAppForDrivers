@@ -74,15 +74,14 @@
             android:theme="@style/EditScreenTextInputLayoutStyle">
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableEnd="@drawable/ic_email_white_24dp"
                 android:drawablePadding="16dp"
                 android:fontFamily="@font/stem_regular"
-                android:hint="@string/email"
+                android:hint="@string/login"
                 android:importantForAutofill="no"
-                android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"

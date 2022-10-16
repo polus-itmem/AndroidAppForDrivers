@@ -1,5 +1,6 @@
 package com.example.polushack
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
@@ -14,9 +15,16 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         updateLoginPage()
+
+
         binding.buttonSignIn.setOnClickListener {
-            Toast.makeText(this@LoginActivity, "You dared to click me?", Toast.LENGTH_SHORT).show()
+            val login = binding.login.text
+            val password = binding.password.text
+            Toast.makeText(this@LoginActivity,
+                "Entered login $login and password $password.", Toast.LENGTH_SHORT).show()
         }
+
+
     }
 
     override fun onResume() {

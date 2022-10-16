@@ -7,4 +7,5 @@
     <string name="password">Пароль</string>
     <string name="click_me">CLICK ME!!!</string>
     <string name="def">Nothing</string>
+    <string name="login">Логин</string>
 </resources>
