@@ -9,3 +9,5 @@
 - **Исполнение заявки (мобильное приложение водителя)**
 - Мониторинг и отчетность (web-интерфейс диспетчера)
 
+# [Презентация проекта](https://docs.google.com/presentation/d/1N-B9DhrTRR8hOL6PGWbADiQmI6-vPD9-HCQ_pOO1cgA/edit#slide=id.g15d33c13ca1_2_16)
+
